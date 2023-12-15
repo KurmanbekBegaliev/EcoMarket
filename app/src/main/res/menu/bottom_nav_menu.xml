@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/mainFragment"
+        android:title="Главная"
+        android:icon="@drawable/home"/>
+
+    <item android:id="@+id/basketFragment"
+        android:title="Корзина"
+        android:icon="@drawable/bag"/>
+
+    <item android:id="@+id/storyFragment"
+        android:title="История"
+        android:icon="@drawable/clock"/>
+
+    <item android:id="@+id/infoFragment"
+        android:title="Инфо"
+        android:icon="@drawable/help_square_contained"/>
+
+</menu>
