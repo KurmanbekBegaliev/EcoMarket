@@ -1,15 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".ui.fragments.info.InfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="info" />
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/img_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+
+            android:src="@drawable/info_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="20dp"
+            android:text="Инфо"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Эко-Маркет"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_info" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:lineHeight="20dp"
+            android:text="Фрукты, овощи, зелень, сухофрукты а так же сделанные из натуральных ЭКО
+продуктов (варенье, салаты, соления, компоты и т.д.) можете заказать удобно, качественно
+и по доступной цене. \nГотовы сотрудничать взаимовыгодно
+с магазинами. \nНаши цены как на рынке. \nМы заинтересованы в экономии ваших денег и времени.\n
+Стоимость доставки 150 сом и ещё добавлен для окраину города.\nПри отказе подтвержденного заказа более
+2-х раз Клиент заносится в чёрный список!!"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:targetApi="p" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/light_gray"
+            android:minHeight="54dp"
+            android:text="Позвонить"
+            android:textAllCaps="false"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_call"
+            app:iconGravity="textStart"
+            app:iconTint="@color/light_black"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_whatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/light_gray"
+            android:drawableStart="@drawable/ic_call"
+            android:minHeight="54dp"
+            android:text="Whatsapp"
+            android:textAllCaps="false"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_whatsapp"
+            app:iconGravity="textStart"
+            app:iconTint="@color/light_black"
+            app:layout_constraintTop_toBottomOf="@id/btn_call" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_instagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/light_gray"
+            android:drawableStart="@drawable/ic_call"
+            android:minHeight="54dp"
+            android:text="Instagram"
+            android:textAllCaps="false"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_instagram"
+            app:iconGravity="textStart"
+            app:iconTint="@color/light_black"
+            app:layout_constraintTop_toBottomOf="@id/btn_whatsapp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
