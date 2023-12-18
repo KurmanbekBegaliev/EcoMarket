@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="16dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="8dp"
     tools:context=".ui.fragments.main.MainFragment">
 
     <TextView
@@ -12,12 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:paddingVertical="14dp"
+        android:paddingVertical="16dp"
         android:text="Эко-Маркет"
-        android:textStyle="bold"
         android:textColor="@color/light_black"
-        android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_category"
@@ -29,6 +29,18 @@
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="-16dp"
         tools:listitem="@layout/category_item" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/main_green"
+        android:indeterminateTint="@color/main_green"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

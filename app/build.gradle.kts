@@ -1,8 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-//    kotlin("kapt")
-//    id("com.google.dagger.hilt.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -65,8 +65,8 @@ dependencies {
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.48")
-//    kapt("com.google.dagger:hilt-android-compiler:2.48")
-//    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.5.0")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.5.0")
 
     // OkHttp
     implementation(platform("com.squareup.okhttp3:okhttp-bom:4.11.0"))
@@ -85,7 +85,7 @@ dependencies {
     implementation("com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.6")
 
     // Fragment
-    implementation("androidx.fragment:fragment-ktx:1.6.1")
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
 
     // Picasso
     implementation("com.squareup.picasso:picasso:2.8")

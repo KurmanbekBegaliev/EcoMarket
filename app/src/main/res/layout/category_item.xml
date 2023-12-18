@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     app:cardCornerRadius="16dp"
+    android:layout_margin="4dp"
     android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="190dp">
 
         <ImageView
-            android:id="@+id/iv_thumbnail"
+            android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@null"
