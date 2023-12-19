@@ -4,7 +4,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.ecomarket.R
 import com.example.ecomarket.base.BaseFragment
 import com.example.ecomarket.databinding.FragmentMainBinding
 import com.example.ecomarket.tools.UiState
@@ -30,6 +32,7 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainViewModel>() {
 
     private fun onClick(id: String) {
         showToast(id)
+        findNavController().navigate(R.id.productsFragment)
     }
 
     override fun setupSubscribes() {

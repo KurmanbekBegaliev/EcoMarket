@@ -25,4 +25,9 @@
         android:name="com.example.ecomarket.ui.fragments.story.StoryFragment"
         android:label="fragment_story"
         tools:layout="@layout/fragment_story" />
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.example.ecomarket.ui.fragments.products.ProductsFragment"
+        android:label="fragment_porducts"
+        tools:layout="@layout/fragment_porducts" />
 </navigation>
