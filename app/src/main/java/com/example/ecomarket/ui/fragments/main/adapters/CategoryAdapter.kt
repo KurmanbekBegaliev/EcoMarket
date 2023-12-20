@@ -9,7 +9,7 @@ import com.example.ecomarket.databinding.CategoryItemBinding
 import com.example.ecomarket.tools.showImage
 
 class CategoryAdapter(
-    private val onClick : (id: String) -> Unit
+    private val onClick : (id: Int) -> Unit
 ) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     private var categories = arrayListOf<CategoryItem>()
@@ -29,7 +29,7 @@ class CategoryAdapter(
             }
 
             itemView.setOnClickListener {
-                onClick(categoryItem.id.toString())
+                categoryItem.id?.toString()?.let { it1 -> onClick(it1.toInt()) }
             }
         }
 

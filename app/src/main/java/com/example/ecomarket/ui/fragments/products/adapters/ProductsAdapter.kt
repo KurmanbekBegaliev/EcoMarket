@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ecomarket.data.models.ProductsItem
 import com.example.ecomarket.databinding.ProductsItemBinding
 import com.example.ecomarket.tools.showImage
+import com.example.ecomarket.tools.viewVisibility
 
 class ProductsAdapter(
     private val onClick: () -> Unit
@@ -27,6 +28,10 @@ class ProductsAdapter(
                  tvTitleProduct.text = product.title
                  tvPriceCounter.text = product.price
                  imgProduct.showImage(product.image)
+
+                 btnAdd.setOnClickListener {
+                     it.viewVisibility(false)
+                 }
              }
         }
 

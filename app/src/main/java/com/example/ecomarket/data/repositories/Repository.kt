@@ -18,4 +18,14 @@ class Repository @Inject constructor(
         }
     }
 
+    suspend fun getProducts() = flow {
+        emit(UiState.Loading())
+        val response = apiService.getProducts()
+        if (response.isSuccessful){
+            emit(UiState.Success(response.body()))
+        } else {
+            emit(UiState.Error(response.message()))
+        }
+    }
+
 }

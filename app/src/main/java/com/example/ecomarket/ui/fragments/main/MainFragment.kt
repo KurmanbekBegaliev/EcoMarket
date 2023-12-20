@@ -1,5 +1,6 @@
 package com.example.ecomarket.ui.fragments.main
 
+import android.os.Bundle
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -30,9 +31,11 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainViewModel>() {
         viewModel.getCategories()
     }
 
-    private fun onClick(id: String) {
-        showToast(id)
-        findNavController().navigate(R.id.productsFragment)
+    private fun onClick(id: Int) {
+        showToast(id.toString())
+        val bundle = Bundle()
+        bundle.putInt("category_key", id)
+        findNavController().navigate(R.id.productsFragment, bundle)
     }
 
     override fun setupSubscribes() {
