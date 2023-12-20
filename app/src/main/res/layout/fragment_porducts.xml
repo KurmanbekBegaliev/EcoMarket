@@ -68,42 +68,49 @@
             app:singleSelection="true">
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/chip_0"
                 style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Все" />
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/chip_1"
                 style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Фрукты" />
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/chip_2"
                 style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Сухофрукты" />
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/chip_3"
                 style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Овощи" />
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/chip_4"
                 style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Зелень" />
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/chip_5"
                 style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Чай кофе" />
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/chip_6"
                 style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
