@@ -8,26 +8,26 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.ecomarket.ui.fragments.main.MainFragment"
-        android:label="fragment_main"
+        android:label="Эко маркет"
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/basketFragment"
         android:name="com.example.ecomarket.ui.fragments.basket.BasketFragment"
-        android:label="fragment_basket"
+        android:label="Корзина"
         tools:layout="@layout/fragment_basket" />
     <fragment
         android:id="@+id/infoFragment"
         android:name="com.example.ecomarket.ui.fragments.info.InfoFragment"
-        android:label="fragment_info"
+        android:label="Инфо"
         tools:layout="@layout/fragment_info" />
     <fragment
         android:id="@+id/storyFragment"
         android:name="com.example.ecomarket.ui.fragments.story.StoryFragment"
-        android:label="fragment_story"
+        android:label="История"
         tools:layout="@layout/fragment_story" />
     <fragment
         android:id="@+id/productsFragment"
         android:name="com.example.ecomarket.ui.fragments.products.ProductsFragment"
-        android:label="fragment_porducts"
+        android:label="Продукты"
         tools:layout="@layout/fragment_porducts" />
 </navigation>

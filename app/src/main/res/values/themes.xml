@@ -3,6 +3,7 @@
     <style name="Base.Theme.EcoMarket" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/main_green</item>
+        <item name="android:statusBarColor">@color/white</item>
     </style>
 
     <style name="Theme.EcoMarket" parent="Base.Theme.EcoMarket" />
@@ -12,6 +13,17 @@
         <item name="android:textColor">@color/chip_text_color</item>
         <item name="chipStrokeColor">@color/chip_stroke_color</item>
         <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <style name="CustomBottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextColor">@color/bottom_nav_view_color</item>
+        <item name="itemIconTint">@color/bottom_nav_view_color</item>
+    </style>
+
+    <style name="CustomToolbarStyle" >
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:textSize">18dp</item>
     </style>
 
 </resources>
