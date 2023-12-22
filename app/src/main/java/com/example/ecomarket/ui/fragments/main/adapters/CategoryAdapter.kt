@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ecomarket.data.models.CategoryItem
 import com.example.ecomarket.databinding.CategoryItemBinding
-import com.example.ecomarket.tools.showImage
+import com.example.ecomarket.tools.setImage
 
 class CategoryAdapter(
     private val onClick : (id: Int) -> Unit
@@ -25,7 +25,7 @@ class CategoryAdapter(
         fun bind(categoryItem: CategoryItem) {
             binding.apply {
                 tvTitle.text = categoryItem.name
-                image.showImage(categoryItem.image)
+                image.setImage(categoryItem.image)
             }
 
             itemView.setOnClickListener {

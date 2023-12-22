@@ -6,11 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ecomarket.data.models.ProductsItem
 import com.example.ecomarket.databinding.ProductsItemBinding
-import com.example.ecomarket.tools.showImage
-import com.example.ecomarket.tools.viewVisibility
+import com.example.ecomarket.tools.setImage
 
 class ProductsAdapter(
-    private val onClick: () -> Unit
+    private val onClick: (item: ProductsItem) -> Unit
 ) : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
 
     private var products = arrayListOf<ProductsItem>()
@@ -22,23 +21,31 @@ class ProductsAdapter(
         notifyDataSetChanged()
     }
 
-    class ViewHolder(private val binding: ProductsItemBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(private val binding: ProductsItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(product: ProductsItem) {
-             binding.apply {
-                 tvTitleProduct.text = product.title
-                 tvPriceCounter.text = product.price
-                 imgProduct.showImage(product.image)
+            binding.apply {
+                tvTitleProduct.text = product.title
+                tvPriceCounter.text = product.price
+                imgProduct.setImage(product.image)
 
-                 btnAdd.setOnClickListener {
-                     it.viewVisibility(false)
-                 }
-             }
+
+            }
+            itemView.setOnClickListener {
+                onClick(product)
+            }
         }
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ProductsItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return ViewHolder(
+            ProductsItemBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun getItemCount() = products.size

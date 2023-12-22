@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.squareup.picasso.Picasso
 
-fun ImageView.showImage(img: String?) {
+fun ImageView.setImage(img: String?) {
     Picasso.get()
         .load(img)
         .into(this)

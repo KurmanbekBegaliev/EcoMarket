@@ -145,8 +145,8 @@ class ProductsFragment : BaseFragment<FragmentPorductsBinding, ProductsViewModel
 
     }
 
-    private fun onClick() {
-
+    private fun onClick(item: ProductsItem) {
+        ProductDescriptionFragment(item).show(requireActivity().supportFragmentManager, "tag")
     }
 
     private fun checkChip(id: Int?): Int {
