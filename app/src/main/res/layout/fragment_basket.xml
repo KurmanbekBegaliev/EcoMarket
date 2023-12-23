@@ -1,15 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
     tools:context=".ui.fragments.basket.BasketFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/basket_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="basket" />
+        android:paddingHorizontal="16dp"
+        android:paddingTop="24dp"
+        android:background="@color/white"
+        android:paddingBottom="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_basket"
+            android:layout_width="match_parent"
+            android:layout_height="396dp"
+            android:maxHeight="400dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/basket_item"/>
+
+        <TextView
+            android:id="@+id/tv_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Сумма"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_basket" />
+
+        <TextView
+            android:id="@+id/tv_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Доставка"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sum" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+
+            android:text="Итого"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_delivery" />
+
+        <TextView
+            android:id="@+id/tv_sum_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="792 с"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_basket" />
+
+        <TextView
+            android:id="@+id/tv_delivery_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="150 с"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sum_price" />
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="842 c"
+            android:textColor="@color/light_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_delivery_price" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_do_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Оформить заказ"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+            android:insetBottom="0dp"
+            android:insetTop="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/empty_basket_layout"
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
 
 </FrameLayout>
